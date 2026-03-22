@@ -27,7 +27,7 @@ const contacts = [
     icon: '💼',
     label: 'LinkedIn',
     value: 'linkedin.com/in/la-minaung',
-    href: 'https://linkedin.com/in/la-minaung',
+    href: 'https://www.linkedin.com/in/la-min-aung-506888175',
     copyable: false,
   },
 ];
