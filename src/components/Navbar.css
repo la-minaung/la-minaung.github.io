@@ -1,0 +1,192 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px 0;
+  transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(8, 13, 26, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+}
+
+/* Raise header above the portal backdrop (150) so the X button is always visible */
+.navbar.menu-open {
+  z-index: 300;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  cursor: pointer;
+}
+
+.logo-mark {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  padding: 6px 12px;
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.logo-mark:hover {
+  background: var(--accent-dim);
+}
+
+/* ── Desktop nav ── */
+.navbar-desktop-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-primary);
+}
+
+/* Desktop active — centred underline */
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+}
+
+.nav-resume-btn {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  margin-left: 8px;
+}
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  position: relative;
+  z-index: 300;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-secondary);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Hidden on desktop — only used inside mobile media query */
+.mobile-drawer,
+.menu-backdrop {
+  display: none;
+}
+
+/* ── Mobile ──────────────────────────────── */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  /* Hide desktop nav on mobile */
+  .navbar-desktop-links { display: none; }
+
+  /* Full-screen overlay — always in DOM, fades in/out via opacity */
+  .menu-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    z-index: 150;
+  }
+
+  .menu-backdrop.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Mobile drawer — direct child of <header>, not inside flex row */
+  .mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: min(280px, 80vw);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 28px 40px;
+    /* Fully opaque — never see-through */
+    background: #0D1428;
+    border-left: 1px solid var(--border);
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 4px;
+    /* Above backdrop (150) and navbar (100) */
+    z-index: 200;
+  }
+
+  .mobile-drawer.open { right: 0; }
+
+  /* Mobile nav links */
+  .mobile-drawer .nav-link {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Mobile active indicator — left-side vertical bar (correct for vertical list) */
+  .mobile-drawer .nav-link.active::after {
+    bottom: auto;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 20px;
+  }
+
+  .mobile-drawer .nav-resume-btn {
+    margin-left: 0;
+    margin-top: 16px;
+    width: 100%;
+    justify-content: center;
+  }
+}
