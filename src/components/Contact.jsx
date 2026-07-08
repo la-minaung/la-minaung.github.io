@@ -11,9 +11,9 @@ const contacts = [
   },
   {
     icon: '📱',
-    label: 'Phone (TH)',
-    value: '+66 60 805 072',
-    href: 'tel:+6660805072',
+    label: 'Phone',
+    value: '+959776966554',
+    href: 'tel:+959776966554',
     copyable: true,
   },
   {
@@ -25,9 +25,9 @@ const contacts = [
   },
   {
     icon: '💼',
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/la-minaung',
-    href: 'https://www.linkedin.com/in/la-min-aung-506888175',
+    label: 'Portfolio',
+    value: 'la-minaung.github.io',
+    href: 'https://la-minaung.github.io',
     copyable: false,
   },
 ];
@@ -48,7 +48,7 @@ export default function Contact() {
           <p className="section-tag">Contact</p>
           <h2 className="section-title">Let's Work Together</h2>
           <p className="section-desc">
-            I'm open to new full-time opportunities in backend engineering and enterprise system integration. Reach out via any of the channels below.
+            Based in Da Nang, Vietnam, I'm open to .NET, C#, MS SQL Server, backend development, and system integration opportunities. Feel free to reach out via any of the channels below.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export default function Contact() {
         <div className="contact-resume">
           <p className="resume-prompt">Want a full overview of my experience?</p>
           <a
-            href="/Resume.pdf"
+            href="/La-Min-Aung-NET-Developer-Resume.pdf"
             className="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"

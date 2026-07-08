@@ -3,8 +3,9 @@ import profileImg from '../assets/profile.jpg';
 import './Hero.css';
 
 const roles = [
-  'Full Stack .NET Developer',
-  'Enterprise Software Developer',
+  '.NET Developer | C# | MS SQL Server',
+  'REST API & System Integration',
+  'Warehouse Automation & Robotics Integration',
 ];
 
 export default function Hero() {
@@ -57,7 +58,7 @@ export default function Hero() {
           </div>
 
           <p className="hero-desc">
-            Full Stack .NET Developer with over 3 years of experience building automation systems for large-scale enterprises. Specialized in backend engineering, database architecture, and complex robotics integration.
+            .NET Developer with 3+ years of experience building C# / ASP.NET systems, MS SQL Server database logic, REST API integrations, and automation services for warehouse, robotics, and logistics platforms.
           </p>
 
           <div className="hero-actions">
@@ -82,7 +83,7 @@ export default function Hero() {
             <div className="stat-divider" />
             <div className="hero-stat">
               <span className="stat-value">5+</span>
-              <span className="stat-label">Global Brands</span>
+              <span className="stat-label">Client Brands</span>
             </div>
           </div>
         </div>

@@ -1,9 +1,9 @@
 import './Education.css';
 
 const certifications = [
-  { title: 'Android Native Development', issuer: 'Fusion Lab Co. Ltd' },
-  { title: 'Intermediate SQL Server', issuer: 'Ginger Grant · DataCamp' },
-  { title: 'Hierarchical & Recursive Queries in SQL', issuer: 'DataCamp' },
+  { title: 'Intermediate SQL Server', issuer: 'Ginger Grant' },
+  { title: 'Hierarchical and Recursive Queries in SQL Server', issuer: 'Jasmin Ludolf' },
+  { title: 'Android Native Course', issuer: 'Fusion Lab Co. Ltd' },
 ];
 
 export default function Education() {
@@ -19,12 +19,11 @@ export default function Education() {
           <div className="card edu-card">
             <div className="edu-icon">🎓</div>
             <div className="edu-info">
-              <h3 className="edu-degree">B.Sc. Computer Science</h3>
-              <p className="edu-school">University of Computer Studies, Taungoo</p>
-              <p className="edu-period">2015 – 2020 · 5-Year Program</p>
+              <h3 className="edu-degree">Computer Science Coursework</h3>
+              <p className="edu-school">University of Computer Studies (Taungoo)</p>
+              <p className="edu-period">2015 – 2020</p>
               <p className="edu-note">
-                Studied through the final year of a 5-year Computer Science program,
-                building a strong foundation in algorithms, data structures, and software engineering.
+                Attended through final year of a 5-year Computer Science program.
               </p>
             </div>
           </div>

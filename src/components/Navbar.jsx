@@ -83,7 +83,7 @@ export default function Navbar() {
           </a>
         ))}
         <a
-          href="/Resume.pdf"
+          href="/La-Min-Aung-NET-Developer-Resume.pdf"
           className="btn btn-outline nav-resume-btn"
           target="_blank"
           rel="noopener noreferrer"
@@ -121,7 +121,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="/Resume.pdf"
+              href="/La-Min-Aung-NET-Developer-Resume.pdf"
               className="btn btn-outline nav-resume-btn"
               target="_blank"
               rel="noopener noreferrer"
