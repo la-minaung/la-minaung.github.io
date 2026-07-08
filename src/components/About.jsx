@@ -1,13 +1,13 @@
 import './About.css';
 
 const highlights = [
-  { label: 'Location', value: 'Bangkok, Thailand' },
+  { label: 'Location', value: 'Da Nang, Vietnam' },
   { label: 'Languages', value: 'English, Burmese' },
   { label: 'Availability', value: 'Open to opportunities' },
-  { label: 'Focus Area', value: 'Backend & System Integration' },
+  { label: 'Focus Area', value: '.NET, MS SQL Server & System Integration' },
 ];
 
-const clients = ['Samsung SDS', 'Charles & Keith', 'Singapore MOE', 'Makino Inc', 'Storefriendly'];
+const clients = ['Samsung SDS', 'Schneider Electric', 'Charles & Keith', 'Makino Inc', 'Storefriendly', 'Singapore MOE'];
 
 export default function About() {
   return (
@@ -15,16 +15,16 @@ export default function About() {
       <div className="container about-inner">
         <div className="about-text">
           <p className="section-tag">About Me</p>
-          <h2 className="section-title">Building Systems That<br />Drive Real Results</h2>
+          <h2 className="section-title">Building .NET Systems For<br />Real Operations</h2>
           <p className="about-desc">
-            I'm a full stack developer focused on backend engineering and enterprise system integration.
-            Over the past 3+ years at Infolog Pte Ltd, I've engineered automation platforms that process
-            thousands of warehouse operations daily — working directly with industry leaders across Singapore and Asia.
+            I'm a .NET developer focused on C#, ASP.NET, MS SQL Server, REST API integrations,
+            and enterprise system integration. Over the past 3+ years at Infolog Pte Ltd,
+            I have worked on warehouse automation, robotics integration, WMS customization,
+            and logistics systems for clients across Singapore and Asia.
           </p>
           <p className="about-desc" style={{ marginTop: '16px' }}>
-            My work sits at the intersection of software and physical operations — connecting ERP systems,
-            robotic platforms, and mobile applications into cohesive, reliable solutions. I take ownership
-            from architecture to delivery.
+            My work connects software with real-world operations, including WMS platforms,
+            PLC communication, robotics systems, Zebra/ZPL printing, reporting, and operational dashboards.
           </p>
 
           <div className="about-clients">
@@ -54,7 +54,7 @@ export default function About() {
             <div className="award-icon">🏆</div>
             <div>
               <p className="award-title">1st Prize — National AI Contest</p>
-              <p className="award-sub">Myanmar Cloud & AI Challenge, 2019</p>
+              <p className="award-sub">Myanmar National Cloud & AI Contest, 2019</p>
             </div>
           </div>
         </div>

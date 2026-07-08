@@ -15,7 +15,7 @@ export default function Footer() {
         </div>
         <div className="footer-links">
           <a href="https://github.com/la-minaung" target="_blank" rel="noopener noreferrer" className="footer-link">GitHub</a>
-          <a href="https://linkedin.com/in/la-minaung" target="_blank" rel="noopener noreferrer" className="footer-link">LinkedIn</a>
+          <a href="https://la-minaung.github.io" target="_blank" rel="noopener noreferrer" className="footer-link">Portfolio</a>
           <a href="mailto:laminaung.dev@gmail.com" className="footer-link">Email</a>
         </div>
       </div>

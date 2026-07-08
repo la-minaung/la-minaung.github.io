@@ -2,33 +2,33 @@ import './Skills.css';
 
 const skillGroups = [
   {
-    category: 'Languages',
+    category: 'Backend & Database',
     icon: '{ }',
-    skills: ['C#', 'SQL', 'JavaScript', 'Java', 'Kotlin'],
+    skills: ['C#', 'ASP.NET', 'MS SQL Server', 'T-SQL', 'REST APIs', 'Windows Services'],
   },
   {
-    category: 'Frameworks & Platforms',
+    category: 'Integration',
     icon: '⚙',
-    skills: ['ASP.NET Core', 'MS SQL Server', 'Angular', 'Android Studio', 'Docker', 'Firebase', 'Crystal Reports'],
+    skills: ['API Integration', 'Modbus TCP', 'Hikrobot', 'Libiao Robotics', 'HuarayTech MVSDK', 'Zebra/ZPL'],
   },
   {
-    category: 'Specializations',
+    category: 'Frontend / Mobile',
     icon: '◈',
-    skills: ['Warehouse Automation', 'Robotics Integration', 'RESTful API Design', 'Database Architecture', 'ERP Integration', 'ZPL / Label Printing'],
+    skills: ['Angular', 'JavaScript', 'Java Android', 'Kotlin', 'SQLite'],
   },
   {
-    category: 'Tools & Methods',
+    category: 'Tools & Concepts',
     icon: '◻',
-    skills: ['SSMS', 'Git', 'Postman', 'Agile / Scrum', 'System Design', 'Technical Documentation'],
+    skills: ['SSMS', 'Docker', 'Firebase', 'Git', 'Crystal Reports', 'Microservices Fundamentals'],
   },
 ];
 
 const coreCompetencies = [
-  { title: 'Backend Engineering', pct: 92 },
-  { title: 'Database Design & Optimization', pct: 88 },
-  { title: 'API Design & Integration', pct: 85 },
-  { title: 'Mobile Development (Android)', pct: 75 },
-  { title: 'System Architecture', pct: 80 },
+  { title: 'C# / ASP.NET Development', pct: 92 },
+  { title: 'MS SQL Server & T-SQL', pct: 88 },
+  { title: 'REST API Integration', pct: 85 },
+  { title: 'Windows Services & Automation', pct: 80 },
+  { title: 'System Integration', pct: 80 },
 ];
 
 export default function Skills() {
@@ -38,8 +38,8 @@ export default function Skills() {
         <p className="section-tag">Technical Skills</p>
         <h2 className="section-title">What I Work With</h2>
         <p className="section-desc">
-          A focused tech stack built around enterprise .NET development, SQL database engineering,
-          and real-world system integration.
+          A focused stack built around C#, ASP.NET, MS SQL Server, REST APIs,
+          Windows Services, warehouse automation, robotics integration, and system integration.
         </p>
 
         <div className="skills-grid">

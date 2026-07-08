@@ -3,34 +3,34 @@ import './Projects.css';
 const projects = [
   {
     tag: 'Warehouse Automation',
-    title: 'Samsung SDS 3D Sorting System',
-    desc: 'Engineered the core backend logic for a high-throughput B2B/B2C packing automation system handling 890+ orders per day. Integrated Samsung Cello WMS with Libiao Robotics for real-time sorting coordination.',
-    impact: '890+ orders/day',
-    tech: ['C#', 'ASP.NET', 'MS SQL Server', 'REST APIs'],
+    title: 'Schneider Electric Warehouse Automation',
+    desc: 'Built a real-time C# service communicating with PLCs via Modbus TCP to capture carton weights and barcodes, determine automated sorting lanes, synchronize order and packaging data, and support exception handling through operational dashboards.',
+    impact: 'Real-time Sorting',
+    tech: ['C#', 'ASP.NET', 'MS SQL Server', 'REST APIs', 'Modbus TCP', 'HuarayTech MVSDK'],
     accent: 'cyan',
   },
   {
-    tag: 'Government / Mobile',
-    title: 'Singapore MOE Asset Management App',
-    desc: 'Delivered a full Android application for Singapore\'s Ministry of Education to manage government assets across schools. Features include barcode scanning, photo documentation, and real-time database sync.',
-    impact: 'Govt. Deployed',
-    tech: ['Java', 'Android Studio', 'SQLite', 'REST APIs'],
+    tag: '3D Sorting Automation',
+    title: 'Samsung SDS Asia Pacific 3D Sorting System',
+    desc: 'Implemented backend logic for 3D sorting and B2B/B2C packing workflows, supporting up to 890 orders daily and 210 orders/hour. Integrated Samsung Cello logistics platform with Libiao Robotics System for automated sorting operations.',
+    impact: '890 Orders/Day',
+    tech: ['C#', 'ASP.NET', 'MS SQL Server', 'REST APIs', 'Libiao Robotics', 'ZPL'],
     accent: 'purple',
+  },
+  {
+    tag: 'Warehouse Automation',
+    title: 'Makino Inc Warehouse Automation',
+    desc: 'Developed forklift automation integration for receiving, pallet transfer, picking, and Zebra label printing workflows. Implemented REST APIs, MS SQL Server workflows, Crystal Reports, and dashboards for warehouse performance monitoring.',
+    impact: 'Forklift Automation',
+    tech: ['C#', 'ASP.NET', 'MS SQL Server', 'REST APIs', 'Crystal Reports', 'Zebra/ZPL'],
+    accent: 'cyan',
   },
   {
     tag: 'Robotics Integration',
     title: 'Storefriendly Robotic Storage System',
-    desc: 'Architected and built a robotic storage management platform for 200+ automated shelves, integrating Hikrobot\'s AS/RS system with a custom management interface for self-storage operations.',
-    impact: '200+ Auto Shelves',
-    tech: ['C#', 'SQL Server', 'Hikrobot SDK', 'REST APIs'],
-    accent: 'cyan',
-  },
-  {
-    tag: 'AI / Mobile · Award Winner',
-    title: 'Paddy Pest Detection App',
-    desc: '🏆 1st Prize – Myanmar National Cloud & AI Contest 2019. Developed a mobile application using image classification and computer vision to help farmers identify crop diseases in real time.',
-    impact: '1st Prize — National',
-    tech: ['Android', 'TensorFlow', 'Computer Vision', 'Cloud AI'],
+    desc: 'Developed a robotic storage management system handling 200+ automated storage shelves across 4 customer terminals. Integrated Hikrobot workflows for shelf retrieval, return, task queue management, and automated door-control synchronization.',
+    impact: '200+ Shelves',
+    tech: ['C#', 'ASP.NET', 'MS SQL Server', 'Hikrobot', 'Windows Services', 'REST APIs'],
     accent: 'purple',
   },
 ];
@@ -42,8 +42,8 @@ export default function Projects() {
         <p className="section-tag">Projects</p>
         <h2 className="section-title">Selected Work</h2>
         <p className="section-desc">
-          A curated selection of enterprise and personal projects that demonstrate
-          depth in backend engineering, system integration, and mobile development.
+          Selected client projects demonstrating .NET development, MS SQL Server workflows,
+          REST API integrations, warehouse automation, and robotics system integration.
         </p>
 
         <div className="projects-grid">
