@@ -33,6 +33,12 @@
   flex-shrink: 0;
 }
 
+.contact-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--accent);
+}
+
 .contact-info {
   flex: 1;
   min-width: 0;
