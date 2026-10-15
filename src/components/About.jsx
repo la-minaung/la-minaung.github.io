@@ -1,62 +1,57 @@
+import { Check, Cpu, Database } from 'lucide-react';
+import SectionHead from './SectionHead';
+import profileImg from '../assets/profile.webp';
+import { about } from '../data/profile';
 import './About.css';
 
-const highlights = [
-  { label: 'Location', value: 'Da Nang, Vietnam' },
-  { label: 'Languages', value: 'English, Burmese' },
-  { label: 'Availability', value: 'Open to opportunities' },
-  { label: 'Focus Area', value: '.NET, MS SQL Server & System Integration' },
-];
-
-const clients = ['Samsung SDS', 'Schneider Electric', 'Charles & Keith', 'Makino Inc', 'Storefriendly', 'Singapore MOE'];
+const icons = { cpu: Cpu, database: Database, check: Check };
 
 export default function About() {
   return (
-    <section className="section" id="about">
-      <div className="container about-inner">
-        <div className="about-text">
-          <p className="section-tag">About Me</p>
-          <h2 className="section-title">Building .NET Systems For<br />Real Operations</h2>
-          <p className="about-desc">
-            I'm a .NET developer focused on C#, ASP.NET, MS SQL Server, REST API integrations,
-            and enterprise system integration. Over the past 3+ years at Infolog Pte Ltd,
-            I have worked on warehouse automation, robotics integration, WMS customization,
-            and logistics systems for clients across Singapore and Asia.
-          </p>
-          <p className="about-desc" style={{ marginTop: '16px' }}>
-            My work connects software with real-world operations, including WMS platforms,
-            PLC communication, robotics systems, Zebra/ZPL printing, reporting, and operational dashboards.
-          </p>
+    <section className="section" id="about" aria-labelledby="about-title">
+      <div className="container">
+        <SectionHead
+          index="01"
+          label="About"
+          id="about-title"
+          title="Software for places where things physically move."
+        />
 
-          <div className="about-clients">
-            <p className="clients-label">DELIVERED SOLUTIONS FOR</p>
-            <div className="clients-list">
-              {clients.map(c => (
-                <span key={c} className="badge">{c}</span>
-              ))}
-            </div>
-          </div>
-        </div>
+        <div className="about-grid">
+          <div className="about-text">
+            {about.paragraphs.map((text, i) => (
+              <p key={i} className="about-desc">{text}</p>
+            ))}
 
-        <div className="about-sidebar">
-          <div className="card about-info-card">
-            <h3 className="info-card-title">Quick Facts</h3>
-            <ul className="info-list">
-              {highlights.map(h => (
-                <li key={h.label} className="info-item">
-                  <span className="info-label">{h.label}</span>
-                  <span className="info-value">{h.value}</span>
-                </li>
-              ))}
+            <ul className="principles">
+              {about.principles.map(({ icon, title, text }) => {
+                const Icon = icons[icon];
+                return (
+                  <li key={title} className="principle">
+                    <span className="principle-icon"><Icon size={18} /></span>
+                    <div>
+                      <h3 className="principle-title">{title}</h3>
+                      <p className="principle-text">{text}</p>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
-          <div className="card about-award-card">
-            <div className="award-icon">🏆</div>
-            <div>
-              <p className="award-title">1st Prize — National AI Contest</p>
-              <p className="award-sub">Myanmar National Cloud & AI Contest, 2019</p>
+          <aside className="about-side">
+            <div className="about-photo">
+              <img src={profileImg} alt="Portrait of La Min Aung" width="280" height="280" loading="lazy" decoding="async" />
             </div>
-          </div>
+            <dl className="card facts">
+              {about.facts.map((f) => (
+                <div key={f.label} className="fact">
+                  <dt>{f.label}</dt>
+                  <dd>{f.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </aside>
         </div>
       </div>
     </section>
